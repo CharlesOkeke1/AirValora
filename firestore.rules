@@ -1,0 +1,37 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ✅ Flights – anyone can read, only you can write
+    match /flights/{flightId} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.uid == "lDAMCuuQiFb7EMLklWcr2EUthYp2";
+    }
+
+    // ✅ Users – user can read/write their own profile
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+
+      // ✅ Subcollection: bookings
+      match /bookings/{bookingId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+
+      // ✅ Subcollection: pastFlights
+      match /pastFlights/{pastFlightId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+
+    // ✅ Crew Applications (yourself + pilots)
+    match /crewMembers/{name} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // ❌ Everything else blocked
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

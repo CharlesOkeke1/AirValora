@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "air-valora"
+  },
+  "targets": {
+    "air-valora": {
+      "hosting": {
+        "air-valora": [
+          "air-valora"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

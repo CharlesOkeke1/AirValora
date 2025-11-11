@@ -1,0 +1,134 @@
+/* Booking.css */
+/* Main booking page layout */
+.booking-page {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+/* Form styles */
+.booking-form {
+  background: white;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form h1 {
+  margin-bottom: 1.5rem;
+  color: #3d0077;
+  text-align: center;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form button {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0 1rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.booking-form button {
+  background-color: #6a0dad; /* Royal purple */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.booking-form button:hover {
+  background-color: #4b0073;
+}
+
+/* Destinations */
+.destinations {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.destinations h2 {
+  margin-bottom: 1.5rem;
+  color: #3d0077;
+}
+
+.destination-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.dest-card {
+  width: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.dest-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
+
+.dest-card p {
+  padding: 0.75rem;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Boarding pass */
+.boarding-pass {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.boarding-pass h2 {
+  color: #3d0077;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.boarding-pass p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a004b; /* Royal purple */
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.main-nav .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.main-nav button {
+  margin-left: 1rem;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.main-nav button:hover {
+  text-decoration: underline;
+}
