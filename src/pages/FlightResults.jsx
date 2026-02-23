@@ -27,7 +27,7 @@ function FlightResults() {
       const userDoc = await getDoc(doc(db, 'users', user.uid));
       const data = userDoc.data() || {};
       setUserAccess(data);
-      console.log('👤 userAccess:', data);
+      console.log(' userAccess:', data);
     };
 
     fetchUserAccess();
@@ -87,7 +87,7 @@ function FlightResults() {
 
 
   const handleSelectFlight = (flight) => {
-    console.log("✅ handleSelectFlight called:", flight.flightCode);
+    console.log(" handleSelectFlight called:", flight.flightCode);
     setExpandedFlight(flight);
     setTimeout(() => {
       sectionRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -159,10 +159,10 @@ function FlightResults() {
                   className="book-btn"
                   disabled={isFull}
                   onClick={() => {
-                    console.log("🛫 Clicked flight:", flight.flightCode);
-                    console.log("🚫 isFCD:", isFCD);
-                    console.log("🔐 userAccess.fcdAccess:", userAccess.fcdAccess);
-                    console.log("❌ isBlocked:", isBlocked);
+                    console.log(" Clicked flight:", flight.flightCode);
+                    console.log(" isFCD:", isFCD);
+                    console.log(" userAccess.fcdAccess:", userAccess.fcdAccess);
+                    console.log(" isBlocked:", isBlocked);
 
                     if (isBlocked) {
                       alert('You need FCD hangar access to book this flight.');
